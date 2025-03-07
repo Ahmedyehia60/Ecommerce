@@ -35,6 +35,10 @@ function activeLinks() {
 
 activeLinks();
 
-
-
-
+document.querySelectorAll(".pro").forEach((div) => {
+  div.addEventListener("click", (e) => {
+    if (!e.target.closest("a")) {
+      window.location.href = "single_product.html";
+    }
+  });
+});
